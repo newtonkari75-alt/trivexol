@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <!-- TRACKING SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/gh/casmar76/SmartClick/smart_click.js" data-origin-url="https://pixel.insulinet.site"></script>
-    <script src="https://cdn.gateraads.com/code/8300-1b4f022e-114c-439b-b944-1c9e1b0c0497"></script>
+    <script src="https://cdn.gateraads.com/code/8300-577a5ac8-6845-4d24-952b-55c21cf3228a"></script>
     
     <!-- SEO ESSENTIALS & PERFORMANCE -->
     <meta charset="UTF-8">
@@ -74,26 +73,30 @@
         .hero-shadow {
             text-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
-        .flag-btn {
-            cursor: pointer;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-        .flag-btn:hover {
-            transform: scale(1.1);
-            opacity: 0.9;
-        }
         .country-card {
             transition: all 0.3s ease;
         }
         .country-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border-color: #3b82f6;
         }
         .hidden-section {
             display: none;
         }
         
+        /* Custom Color Classes for easier maintenance */
+        .bg-primary { background-color: #4E6191; }
+        .text-primary { color: #4E6191; }
+        .border-primary { border-color: #4E6191; }
+        .hover-bg-primary-dark:hover { background-color: #3b4a6b; }
+        
+        .bg-secondary { background-color: #91BFD1; }
+        .text-secondary { color: #91BFD1; }
+        .border-secondary { border-color: #91BFD1; }
+        
+        .bg-details { background-color: #D9CDC7; }
+        .border-details { border-color: #D9CDC7; }
+
         /* Toast Notification */
         #toast-container {
             position: fixed;
@@ -115,19 +118,19 @@
     <!-- LANDING PAGE CONTENT -->
     <main id="landing-page" role="main">
         
-        <!-- Top Bar -->
-        <div class="bg-black text-white text-[10px] md:text-xs font-bold py-2 text-center uppercase tracking-wide w-full">
+        <!-- Top Bar (Primary Color) -->
+        <div class="bg-primary text-white text-[10px] md:text-xs font-bold py-2 text-center uppercase tracking-wide w-full">
             <span data-i18n="top_bar">SPECIAL LIMITED TIME OFFER | 48% OFF</span>
         </div>
 
-        <!-- Sub-header -->
-        <div class="bg-gray-100 text-xs py-2 border-b border-gray-200 w-full">
+        <!-- Sub-header (Details Color) -->
+        <div class="bg-details text-xs py-2 border-b border-gray-200 w-full">
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6">
                 <div class="font-bold flex items-center gap-1">
                     <img src="https://flagcdn.com/w20/eu.png" alt="EU Flag" class="h-3 w-auto" id="dynamic-region-flag">
                     <span data-i18n="sub_header_1">EUROPE'S #1 RATED CHOICE</span>
                 </div>
-                <div class="flex items-center gap-3 text-[10px] md:text-xs font-semibold text-gray-700 uppercase">
+                <div class="flex items-center gap-3 text-[10px] md:text-xs font-semibold text-gray-800 uppercase">
                     <span><i class="fas fa-truck text-black mr-1"></i> <span data-i18n="sub_header_2">FAST & FREE SHIPPING</span></span>
                     <span><i class="fas fa-shield-alt text-black mr-1"></i> <span data-i18n="sub_header_3">30-DAY MONEY-BACK GUARANTEE</span></span>
                 </div>
@@ -139,11 +142,6 @@
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center">
                     <img src="images/trivexol-logo.svg" onerror="this.src='https://placehold.co/120x40?text=Trivexol'" alt="Trivexol Official Logo" class="h-8 md:h-10 w-auto">
-                </div>
-                <div class="flex items-center gap-1.5 md:gap-2 flex-wrap justify-end max-w-[60%] md:max-w-none">
-                    <img src="https://flagcdn.com/w20/fr.png" onclick="setLanguage('fr', 'fr')" class="flag-btn h-3 md:h-4 w-auto shadow-sm rounded-[1px]" alt="Français" title="France">
-                    <img src="https://flagcdn.com/w20/de.png" onclick="setLanguage('de', 'de')" class="flag-btn h-3 md:h-4 w-auto shadow-sm rounded-[1px]" alt="Deutsch" title="Deutschland">
-                    <img src="https://flagcdn.com/w20/gb.png" onclick="setLanguage('en', 'gb')" class="flag-btn h-3 md:h-4 w-auto shadow-sm rounded-[1px]" alt="English" title="English">
                 </div>
             </div>
         </header>
@@ -178,7 +176,7 @@
                     <!-- Main Title (H1) -->
                     <h1 class="text-2xl md:text-4xl font-black text-black leading-tight mb-4" data-i18n="main_title">
                         Discover the Power of Trivexol — <br class="hidden md:block">
-                        <span class="text-gray-800">A Smarter Way to Support Your Body, Naturally.</span>
+                        <span class="text-primary">A Smarter Way to Support Your Body, Naturally.</span>
                     </h1>
 
                     <!-- Subtitle -->
@@ -188,32 +186,34 @@
 
                     <!-- Features Section -->
                     <div class="mb-6">
-                        <h2 class="text-lg font-bold text-black mb-4 uppercase tracking-wide border-l-4 border-blue-500 pl-3" data-i18n="why_love">
+                        <!-- Border is Secondary Color -->
+                        <h2 class="text-lg font-bold text-black mb-4 uppercase tracking-wide border-l-4 border-secondary pl-3" data-i18n="why_love">
                             Why Choose Trivexol?
                         </h2>
                         <ul class="space-y-4 md:grid md:grid-cols-1 md:space-y-4">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mt-0.5 shrink-0"></i>
+                                <!-- Icons are Primary Color -->
+                                <i class="fas fa-check-circle text-primary text-xl mt-0.5 shrink-0"></i>
                                 <span class="text-gray-700 text-sm md:text-base" data-i18n="bullet_1"><strong>Scientifically Selected Ingredients</strong> – Formulated with ingredients known for their role in supporting metabolism, energy balance, and appetite control.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mt-0.5 shrink-0"></i>
+                                <i class="fas fa-check-circle text-primary text-xl mt-0.5 shrink-0"></i>
                                 <span class="text-gray-700 text-sm md:text-base" data-i18n="bullet_2"><strong>100% Natural & Clean Formula</strong> – Free from GMOs, artificial additives, and unnecessary chemicals — designed for long-term daily use.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mt-0.5 shrink-0"></i>
+                                <i class="fas fa-check-circle text-primary text-xl mt-0.5 shrink-0"></i>
                                 <span class="text-gray-700 text-sm md:text-base" data-i18n="bullet_3"><strong>Supports Metabolic Balance</strong> – Helps your body optimize energy use and manage weight more efficiently over time.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mt-0.5 shrink-0"></i>
+                                <i class="fas fa-check-circle text-primary text-xl mt-0.5 shrink-0"></i>
                                 <span class="text-gray-700 text-sm md:text-base" data-i18n="bullet_4"><strong>Sustained Energy, No Crashes</strong> – Promotes natural vitality without stimulants or sudden energy drops.</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mt-0.5 shrink-0"></i>
+                                <i class="fas fa-check-circle text-primary text-xl mt-0.5 shrink-0"></i>
                                 <span class="text-gray-700 text-sm md:text-base" data-i18n="bullet_5"><strong>Simple Daily Routine</strong> – Easy to integrate into your lifestyle — no complicated protocols.</span>
                             </li>
                              <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mt-0.5 shrink-0"></i>
+                                <i class="fas fa-check-circle text-primary text-xl mt-0.5 shrink-0"></i>
                                 <span class="text-gray-700 text-sm md:text-base" data-i18n="bullet_6"><strong>Satisfaction Guaranteed</strong> – Try Trivexol with confidence, backed by a customer satisfaction guarantee.</span>
                             </li>
                         </ul>
@@ -221,18 +221,19 @@
 
                     <!-- CTA SECTION -->
                     <div class="w-full mb-8">
-                        <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" class="w-full bg-[#2e2e2e] hover:bg-black text-white font-black text-xl md:text-2xl py-4 rounded-lg shadow-lg hover:shadow-xl transform transition hover:-translate-y-0.5 uppercase tracking-wide mb-4">
+                        <!-- Button is Primary Color -->
+                        <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" class="w-full bg-primary hover-bg-primary-dark text-white font-black text-xl md:text-2xl py-4 rounded-lg shadow-lg hover:shadow-xl transform transition hover:-translate-y-0.5 uppercase tracking-wide mb-4">
                             <span data-i18n="cta_button">GET 48% OFF – LIMITED TIME OFFER</span>
                         </button>
                         
                         <div class="flex flex-col items-center justify-center gap-1 text-gray-500 text-xs md:text-sm font-medium">
                             <span class="text-center italic" data-i18n="cta_sub1">Start supporting your metabolism today with Trivexol.</span>
-                            <span class="text-center text-blue-600 font-bold" data-i18n="cta_sub2">30-Day Money-Back Guarantee</span>
+                            <span class="text-center text-primary font-bold" data-i18n="cta_sub2">30-Day Money-Back Guarantee</span>
                         </div>
                     </div>
 
-                    <!-- Social Proof Box -->
-                    <div class="border border-gray-200 rounded-xl p-4 shadow-sm bg-gray-50 md:max-w-lg mb-10">
+                    <!-- Social Proof Box (Border is Secondary Color) -->
+                    <div class="border border-secondary rounded-xl p-4 shadow-sm bg-white md:max-w-lg mb-10">
                         <div class="flex items-center justify-center gap-3 pb-3 border-b border-gray-200 mb-3">
                             <div class="flex -space-x-3">
                                 <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=35" alt="Customer Avatar">
@@ -273,46 +274,46 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                     
                     <!-- France (FR) -->
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/225JFQ11/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-blue-500/30 transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
+                    <a href="https://www.knownwalk.com/2JCZKZ1X/225JFQ11/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-secondary transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
                         <img src="https://flagcdn.com/w80/fr.png" alt="France Flag" class="w-12 h-auto rounded shadow-sm object-cover">
                         <div class="text-left">
-                            <span class="block font-bold text-slate-900 text-lg group-hover:text-blue-600 transition-colors">France</span>
+                            <span class="block font-bold text-slate-900 text-lg group-hover:text-primary transition-colors">France</span>
                             <span class="text-xs text-slate-500 font-medium">Offre Exclusive Disponible</span>
                         </div>
                     </a>
 
                     <!-- Belgium (BE) -->
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/225JFQ11/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-blue-500/30 transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
+                    <a href="https://www.knownwalk.com/2JCZKZ1X/225JFQ11/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-secondary transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
                         <img src="https://flagcdn.com/w80/be.png" alt="Belgium Flag" class="w-12 h-auto rounded shadow-sm object-cover">
                         <div class="text-left">
-                            <span class="block font-bold text-slate-900 text-lg group-hover:text-blue-600 transition-colors">Belgium</span>
+                            <span class="block font-bold text-slate-900 text-lg group-hover:text-primary transition-colors">Belgium</span>
                             <span class="text-xs text-slate-500 font-medium">Offre / Aanbieding</span>
                         </div>
                     </a>
 
                     <!-- Switzerland (CH) -->
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/225H2T8D/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-blue-500/30 transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
+                    <a href="https://www.knownwalk.com/2JCZKZ1X/225H2T8D/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-secondary transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
                         <img src="https://flagcdn.com/w80/ch.png" alt="Switzerland Flag" class="w-12 h-auto rounded shadow-sm object-cover">
                         <div class="text-left">
-                            <span class="block font-bold text-slate-900 text-lg group-hover:text-blue-600 transition-colors">Switzerland</span>
+                            <span class="block font-bold text-slate-900 text-lg group-hover:text-primary transition-colors">Switzerland</span>
                             <span class="text-xs text-slate-500 font-medium">Angebot / Offre</span>
                         </div>
                     </a>
 
                     <!-- Germany (DE) -->
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/225H2T8D/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-blue-500/30 transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
+                    <a href="https://www.knownwalk.com/2JCZKZ1X/225H2T8D/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-secondary transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
                         <img src="https://flagcdn.com/w80/de.png" alt="Germany Flag" class="w-12 h-auto rounded shadow-sm object-cover">
                         <div class="text-left">
-                            <span class="block font-bold text-slate-900 text-lg group-hover:text-blue-600 transition-colors">Germany</span>
+                            <span class="block font-bold text-slate-900 text-lg group-hover:text-primary transition-colors">Germany</span>
                             <span class="text-xs text-slate-500 font-medium">Exklusives Angebot</span>
                         </div>
                     </a>
 
                     <!-- Austria (AT) -->
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/225H2T8D/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-blue-500/30 transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
+                    <a href="https://www.knownwalk.com/2JCZKZ1X/225H2T8D/" class="group bg-white p-5 rounded-2xl border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:border-secondary transition-all duration-300 flex items-center gap-4 no-underline hover:-translate-y-1">
                         <img src="https://flagcdn.com/w80/at.png" alt="Austria Flag" class="w-12 h-auto rounded shadow-sm object-cover">
                         <div class="text-left">
-                            <span class="block font-bold text-slate-900 text-lg group-hover:text-blue-600 transition-colors">Austria</span>
+                            <span class="block font-bold text-slate-900 text-lg group-hover:text-primary transition-colors">Austria</span>
                             <span class="text-xs text-slate-500 font-medium">Exklusives Angebot</span>
                         </div>
                     </a>
@@ -321,16 +322,15 @@
             </div>
         </section>
         
-        <!-- Footer Section -->
-        <footer class="bg-gray-100 border-t border-gray-200 pt-12 pb-8">
+        <!-- Footer Section (Details Color Background) -->
+        <footer class="bg-details border-t border-gray-200 pt-12 pb-8">
             <div class="container mx-auto px-4 max-w-5xl">
                 
                 <div class="flex flex-col justify-center items-center gap-10 mb-10">
                     <div class="flex flex-col items-center gap-4">
-                        <!-- Updated image path to images/ folder -->
                         <img src="images/trivexol-logo.svg" onerror="this.style.display='none'" alt="Trivexol Official Logo" class="h-8 w-auto opacity-80 grayscale">
                         
-                        <p class="text-center text-gray-500 text-sm md:text-base leading-relaxed max-w-2xl mx-auto" data-i18n="footer_text">
+                        <p class="text-center text-gray-700 text-sm md:text-base leading-relaxed max-w-2xl mx-auto" data-i18n="footer_text">
                             Trivexol is committed to improving your quality of life through innovation and care. Join the thousands of satisfied customers who have made Trivexol a part of their daily routine.
                         </p>
                     </div>
@@ -339,13 +339,13 @@
                     <div class="flex flex-col items-center gap-6">
                         <h3 class="text-xl font-black text-gray-900 uppercase tracking-wider" data-i18n="footer_care_title">CUSTOMER CARE</h3>
                         <div class="flex flex-col gap-4 items-start sm:items-center">
-                            <a href="mailto:support@trivexol.com" class="flex items-center gap-3 text-gray-600 hover:text-black transition font-bold text-[15px] group">
+                            <a href="mailto:support@trivexol.com" class="flex items-center gap-3 text-gray-700 hover:text-black transition font-bold text-[15px] group">
                                 <div class="w-8 h-8 rounded-full bg-white border border-gray-300 flex items-center justify-center group-hover:border-black transition">
                                     <i class="fas fa-envelope text-sm"></i>
                                 </div>
                                 <span data-i18n="footer_email">Send Us An Email</span>
                             </a>
-                            <button onclick="showToast('Live Chat Connecting...', 'success')" class="flex items-center gap-3 text-gray-600 hover:text-black transition font-bold text-[15px] group">
+                            <button onclick="showToast('Live Chat Connecting...', 'success')" class="flex items-center gap-3 text-gray-700 hover:text-black transition font-bold text-[15px] group">
                                 <div class="w-8 h-8 rounded-full bg-white border border-gray-300 flex items-center justify-center group-hover:border-black transition">
                                     <i class="fas fa-comment-dots text-sm"></i>
                                 </div>
@@ -355,11 +355,11 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-t border-gray-200 pt-8 text-sm text-gray-500">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-t border-gray-300 pt-8 text-sm text-gray-600">
                     <p>© 2025 Trivexol. All rights reserved.</p>
                     <div class="flex items-center gap-6">
-                        <button onclick="showPolicy('privacy')" class="hover:text-gray-700 transition-colors font-medium">Privacy Policy</button>
-                        <button onclick="showPolicy('terms')" class="hover:text-gray-700 transition-colors font-medium">Terms of Service</button>
+                        <button onclick="showPolicy('privacy')" class="hover:text-black transition-colors font-medium">Privacy Policy</button>
+                        <button onclick="showPolicy('terms')" class="hover:text-black transition-colors font-medium">Terms of Service</button>
                     </div>
                 </div>
             </div>
@@ -370,9 +370,8 @@
     <section id="legal-page" class="hidden-section w-full bg-white min-h-screen">
         <div class="border-b border-gray-200 py-4 px-4 sticky top-0 bg-white z-50 shadow-sm">
             <div class="container mx-auto max-w-4xl flex justify-between items-center">
-                <!-- Updated image path to images/ folder -->
                 <img src="images/trivexol-logo.svg" onerror="this.src='https://placehold.co/120x40?text=Trivexol'" alt="Trivexol Logo" class="h-6 md:h-8 w-auto">
-                <button onclick="hidePolicy()" class="flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors">
+                <button onclick="hidePolicy()" class="flex items-center gap-2 text-sm font-bold text-primary hover:text-black transition-colors">
                     <i class="fas fa-arrow-left"></i> Back to Home
                 </button>
             </div>
@@ -409,7 +408,7 @@
                 sub_header_2: "FAST & FREE SHIPPING",
                 sub_header_3: "30-DAY MONEY-BACK GUARANTEE",
                 ratings: "Trusted by 15,000+ Customers Across Europe",
-                main_title: "Discover the Power of Trivexol — <br class='hidden md:block'><span class='text-gray-800'>A Smarter Way to Support Your Body, Naturally.</span>",
+                main_title: "Discover the Power of Trivexol — <br class='hidden md:block'><span class='text-primary'>A Smarter Way to Support Your Body, Naturally.</span>",
                 subtitle: "Experience a new standard in daily wellness. Trivexol was developed to support your metabolism, energy levels, and overall balance — helping you feel lighter, more focused, and in control of your body again. Designed with carefully selected ingredients and backed by quality standards, Trivexol fits seamlessly into a healthy, modern lifestyle.",
                 why_love: "Why Choose Trivexol?",
                 bullet_1: "<strong>Scientifically Selected Ingredients</strong> – Formulated with ingredients known for their role in supporting metabolism, energy balance, and appetite control.",
@@ -437,7 +436,7 @@
                 sub_header_2: "LIVRAISON RAPIDE ET GRATUITE",
                 sub_header_3: "GARANTIE DE 30 JOURS SATISFAIT OU REMBOURSÉ",
                 ratings: "Plus de 15 000 clients font confiance à Trivexol",
-                main_title: "Découvrez la Puissance de Trivexol — <br class='hidden md:block'><span class='text-gray-800'>La Solution Ultime pour le Quotidien.</span>",
+                main_title: "Découvrez la Puissance de Trivexol — <br class='hidden md:block'><span class='text-primary'>La Solution Ultime pour le Quotidien.</span>",
                 subtitle: "Découvrez une technologie avancée conçue pour apporter confort, efficacité et joie à votre routine. Trivexol est l'innovation que vous attendiez.",
                 why_love: "Pourquoi Choisir Trivexol ?",
                 bullet_1: "Formule cliniquement testée et approuvée",
@@ -465,7 +464,7 @@
                 sub_header_2: "SCHNELLER & KOSTENLOSER VERSAND",
                 sub_header_3: "30 TAGE GELD-ZURÜCK-GARANTIE",
                 ratings: "15.000+ Kunden vertrauen täglich auf Trivexol",
-                main_title: "Entdecken Sie die Kraft von Trivexol — <br class='hidden md:block'><span class='text-gray-800'>Die ultimative Lösung für den Alltag.</span>",
+                main_title: "Entdecken Sie die Kraft von Trivexol — <br class='hidden md:block'><span class='text-primary'>Die ultimative Lösung für den Alltag.</span>",
                 subtitle: "Erleben Sie fortschrittliche Technologie für mehr Komfort, Effizienz und Freude in Ihrer Routine. Trivexol ist die Innovation, auf die Sie gewartet haben.",
                 why_love: "Warum Trivexol wählen?",
                 bullet_1: "Klinisch getestete und bewährte Formel",
