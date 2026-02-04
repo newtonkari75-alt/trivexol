@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <!-- SEO & COMPLIANCE 2026 -->
+    <!-- TRACKING SCRIPT -->
+    <script src="https://api.raads-trc.com/code/8300-8ce4d960-9d3d-4ec0-b3c0-8e2fca7d6215"></script>
+
+    <!-- METADATA & COMPLIANCE -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Blindagem: Identidade como Portal Independente para evitar Misrepresentation -->
     <title>Trivexol – Uafhængig Informationsportal & Autoriseret Tilbud | Danmark</title>
     <meta name="description" content="Uafhængig gennemgang og autoriserede tilbud på Trivexol. Opdag hvordan denne naturlige formel understøtter metabolisk balance. Resultater kan variere.">
     <meta name="robots" content="index, follow">
     
-    <!-- Hreflang Tags -->
-    <link rel="alternate" hreflang="da" href="https://trivexol.vercel.app/" />
-    <link rel="alternate" hreflang="x-default" href="https://trivexol.vercel.app/" />
-    
-    <!-- Favicon -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="images/trivexol-favcon.png">
 
-    <!-- Biblioteker -->
+    <!-- LIBRARIES -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,250 +31,270 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 200;
+            z-index: 300;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
             background-color: rgba(0,0,0,0.85);
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
         }
         .modal-content {
             background-color: #fefefe;
-            margin: 10% auto;
-            padding: 24px;
-            border-radius: 16px;
-            width: 92%;
-            max-width: 700px;
-            max-height: 80vh;
+            margin: 5% auto;
+            padding: 25px;
+            border-radius: 20px;
+            width: 94%;
+            max-width: 800px;
+            max-height: 85vh;
             overflow-y: auto;
         }
         
         /* Minimalist Cookie Banner */
         #cookie-banner {
             position: fixed;
-            bottom: 16px;
+            bottom: 15px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
-            max-width: 450px;
+            max-width: 400px;
             background: white;
-            padding: 12px 16px;
+            padding: 10px 15px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
-            z-index: 150;
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 250;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #eee;
         }
 
-        /* Custom Scrollbar for Modal */
-        .modal-content::-webkit-scrollbar { width: 6px; }
-        .modal-content::-webkit-scrollbar-track { background: #f1f1f1; }
-        .modal-content::-webkit-scrollbar-thumb { background: #4E6191; border-radius: 10px; }
-
         @media (max-width: 640px) {
-            .hero-title { font-size: 1.75rem !important; line-height: 1.2; }
-            .section-padding { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+            .mobile-h1 { font-size: 1.85rem !important; line-height: 1.2; }
+            .mobile-body { font-size: 1.05rem !important; }
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
 
-    <!-- Minimalist Cookie Consent -->
-    <div id="cookie-banner" class="flex items-center justify-between gap-4">
-        <p class="text-[10px] md:text-xs text-gray-600 leading-tight">
+    <!-- MINIMALIST COOKIE BANNER -->
+    <div id="cookie-banner">
+        <p class="text-[10px] text-gray-500 leading-tight pr-2">
             Vi bruger cookies til at optimere din oplevelse. 
-            <button onclick="openModal('privacy')" class="underline">Læs mere</button>.
+            <button onclick="openModal('privacy')" class="underline font-bold text-primary">Læs mere</button>.
         </p>
-        <button onclick="document.getElementById('cookie-banner').style.display='none'" class="bg-primary text-white text-[10px] font-bold py-2 px-4 rounded-lg uppercase whitespace-nowrap">
+        <button onclick="document.getElementById('cookie-banner').style.display='none'" class="bg-primary text-white text-[10px] font-bold py-2 px-4 rounded-lg uppercase transition-transform active:scale-90">
             OK
         </button>
     </div>
 
-    <!-- Top Bar -->
-    <div class="bg-primary text-white text-[9px] md:text-xs font-bold py-2 text-center uppercase tracking-widest px-4">
+    <!-- TOP BAR -->
+    <div class="bg-primary text-white text-[10px] md:text-xs font-bold py-2 text-center uppercase tracking-widest px-4">
         AUTORISERET FORHANDLER | BEGRÆNSET TILBUD | SPAR 48% I DAG
     </div>
 
-    <!-- Header Navigation -->
-    <nav class="bg-white border-b border-gray-100 py-3 sticky top-0 z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- NAVBAR (CLEAN) -->
+    <nav class="bg-white border-b border-gray-100 py-4 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-5 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="images/trivexol-logo.svg" onerror="this.src='https://placehold.co/100x30/4E6191/ffffff?text=Trivexol'" alt="Trivexol Portal" class="h-6 md:h-8 w-auto">
+                <img src="images/trivexol-logo.svg" onerror="this.src='https://placehold.co/120x35/4E6191/ffffff?text=Trivexol'" alt="Trivexol Logo" class="h-7 md:h-9 w-auto">
             </div>
-            <div class="flex gap-4 md:gap-6 text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500">
-                <a href="#about" class="hover:text-primary transition">Info</a>
-                <a href="#faq" class="hidden sm:inline hover:text-primary transition">FAQ</a>
-                <a href="#country-selection" class="bg-primary text-white px-3 py-1 rounded-md transition">Priser</a>
+            <div class="flex gap-4 text-[11px] md:text-xs font-bold uppercase tracking-widest">
+                <a href="#about" class="text-gray-400 hover:text-primary transition">Info</a>
+                <a href="#country-selection" class="bg-primary text-white px-4 py-1.5 rounded-lg active:scale-95 shadow-sm transition">Priser</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section Otimizada -->
-    <section class="relative w-full h-[300px] md:h-[500px] bg-gray-900">
-        <img src="images/trivexol.png" class="absolute inset-0 w-full h-full object-cover object-center opacity-70" alt="Trivexol Produktpræsentation">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-        <div class="absolute inset-0 flex items-end md:items-center justify-center text-center px-6 pb-10 md:pb-0">
-            <div class="max-w-2xl text-white">
-                <h1 class="hero-title text-2xl md:text-5xl font-black mb-3 md:mb-4 uppercase italic tracking-tighter drop-shadow-lg">
-                    Understøt din krop naturligt
-                </h1>
-                <p class="text-xs md:text-lg font-medium text-gray-200 drop-shadow-md">
-                    Din daglige partner til metabolisk balance og vitalitet.
-                </p>
-            </div>
-        </div>
+    <!-- HERO IMAGE (NO TEXT OVERLAY) -->
+    <section class="relative w-full h-auto bg-gray-200">
+        <img src="images/trivexol.png" class="w-full h-auto block object-cover" alt="Trivexol Produkt">
     </section>
 
-    <!-- Content Section -->
-    <section id="about" class="section-padding container mx-auto px-6 py-10 max-w-4xl">
-        <div class="flex items-center justify-center md:justify-start gap-1 mb-4 text-yellow-500 text-xs">
+    <!-- HERO CONTENT (TEXT BELOW IMAGE) -->
+    <section id="about" class="container mx-auto px-6 py-10 md:py-16 max-w-4xl">
+        <div class="flex items-center gap-1 mb-5 text-yellow-500 text-sm justify-center md:justify-start">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <span class="text-gray-900 font-extrabold ml-1">4.9/5 Tilfredshed</span>
+            <span class="text-gray-900 font-black ml-2 uppercase tracking-tighter">4.9/5 Tilfredshed</span>
         </div>
         
-        <h2 class="text-xl md:text-4xl font-black text-gray-900 mb-5 leading-tight text-center md:text-left">
-            Opdag Trivexol – <span class="text-primary">Smartere Støtte.</span>
-        </h2>
-        <p class="text-gray-600 text-sm md:text-lg mb-8 leading-relaxed text-center md:text-left">
-            Trivexol er formuleret med nøje udvalgte naturlige ingredienser for at støtte dit stofskifte og energiniveau. Det er det ideelle valg for dem, der ønsker en sund livsstil i balance. 
+        <h1 class="mobile-h1 text-2xl md:text-5xl font-black text-gray-900 mb-6 leading-tight text-center md:text-left">
+            Opdag Trivexol – <span class="text-primary">Smartere Støtte til din krop, naturligt.</span>
+        </h1>
+        
+        <p class="mobile-body text-gray-600 text-base md:text-xl mb-10 leading-relaxed text-center md:text-left">
+            Oplev en ny standard for daglig velvære. Trivexol er udviklet til at støtte dit stofskifte, energiniveau og generelle balance – så du kan føle dig lettere og mere fokuseret hver dag.
         </p>
 
-        <!-- Value Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-10">
-            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
-                <div class="bg-primary/10 p-3 rounded-full text-primary">
-                    <i class="fas fa-leaf text-sm"></i>
+        <!-- FEATURES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
+                <div class="bg-primary/10 p-3 rounded-xl text-primary shrink-0">
+                    <i class="fas fa-check-circle text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-sm md:text-base mb-1">100% Naturlig</h3>
-                    <p class="text-[11px] md:text-sm text-gray-500">Ingen skjulte kemikalier, kun rene ingredienser.</p>
+                    <h3 class="font-bold text-gray-900 mb-1">100% Naturlig formel</h3>
+                    <p class="text-sm text-gray-500">Uden GMO eller unødvendige kemikalier.</p>
                 </div>
             </div>
-            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
-                <div class="bg-primary/10 p-3 rounded-full text-primary">
-                    <i class="fas fa-check-shield text-sm"></i>
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
+                <div class="bg-primary/10 p-3 rounded-xl text-primary shrink-0">
+                    <i class="fas fa-check-circle text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-sm md:text-base mb-1">Kvalitetssikret</h3>
-                    <p class="text-[11px] md:text-sm text-gray-500">Produceret under de højeste EU-standarder.</p>
+                    <h3 class="font-bold text-gray-900 mb-1">Metabolisk balance</h3>
+                    <p class="text-sm text-gray-500">Støtter kroppens naturlige energiforbrug.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Blinded CTA -->
+        <!-- MAIN CTA -->
         <div class="text-center">
-            <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" class="w-full md:w-auto bg-primary hover:bg-[#3b4a6b] text-white font-black text-base md:text-xl py-4 md:py-5 px-10 rounded-xl shadow-xl transition-all transform active:scale-95 uppercase tracking-tight">
-                Tjek Officielt Tilbud Nu
+            <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" class="w-full md:w-auto bg-primary hover:bg-[#3b4a6b] text-white font-black text-lg md:text-2xl py-5 px-14 rounded-2xl shadow-xl transition-all active:scale-95 uppercase tracking-tighter">
+                Tjek Officielt Tilbud Her
             </button>
-            <p class="text-[9px] md:text-[10px] text-gray-400 mt-4 uppercase tracking-widest font-bold px-4 leading-normal">
+            <p class="text-[10px] md:text-xs text-gray-400 mt-5 uppercase tracking-widest font-bold">
                 Sikker forbindelse til producentens officielle checkout
             </p>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="bg-gray-100 py-12 md:py-20">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-xl md:text-3xl font-black text-center mb-8 uppercase italic tracking-tighter text-primary">Spørgsmål & Svar</h2>
-            <div class="space-y-3">
-                <details class="group bg-white rounded-xl shadow-sm border border-transparent open:border-primary transition-all">
-                    <summary class="p-4 font-bold cursor-pointer flex justify-between items-center text-sm md:text-base list-none">
-                        Hvad er Trivexol?
-                        <span class="text-primary group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-xs"></i></span>
-                    </summary>
-                    <div class="p-4 pt-0 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-50 mt-2">
-                        Trivexol er et naturligt kosttilskud designet til at støtte kroppens stofskifte og energiniveau som en del af en sund livsstil.
-                    </div>
-                </details>
-                <details class="group bg-white rounded-xl shadow-sm border border-transparent open:border-primary transition-all">
-                    <summary class="p-4 font-bold cursor-pointer flex justify-between items-center text-sm md:text-base list-none">
-                        Er det sikkert at bruge?
-                        <span class="text-primary group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-xs"></i></span>
-                    </summary>
-                    <div class="p-4 pt-0 text-xs md:text-sm text-gray-600 leading-relaxed border-t border-gray-50 mt-2">
-                        Ja, formlen er baseret på naturlige ingredienser. Vi anbefaler dog altid at konsultere din læge, hvis du er gravid eller tager medicin.
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- Country Selection Otimizado -->
-    <section id="country-selection" class="py-12 md:py-24 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl md:text-4xl font-black mb-4 tracking-tighter">Vælg din region</h2>
-            <p class="text-gray-500 text-xs md:text-base mb-10 max-w-xl mx-auto">Vælg dit land for at se lokale priser og fragtmuligheder.</p>
+    <!-- COUNTRY SELECTION (2 COLUMNS ON MOBILE) -->
+    <section id="country-selection" class="py-16 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-4xl font-black mb-10 tracking-tight uppercase italic">Vælg din region</h2>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC4XPWB/?uid=50294" class="flex items-center gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary hover:bg-gray-50 transition active:bg-gray-100">
-                    <img src="https://flagcdn.com/w80/dk.png" class="w-10 h-auto rounded-sm shadow-sm" alt="Danmark">
-                    <div class="text-left leading-tight">
-                        <span class="block font-extrabold text-sm md:text-base text-gray-900">Danmark</span>
-                        <span class="text-[10px] text-primary font-bold uppercase tracking-tighter">Gå til butik</span>
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-5xl mx-auto px-2">
+                
+                <!-- DANMARK -->
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC4XPWB/?uid=50294" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/dk.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Danmark">
+                    <div class="text-center md:text-left">
+                        <span class="block font-black text-xs md:text-lg text-gray-900">Danmark</span>
+                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
                     </div>
                 </a>
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC25ZF4/?uid=50295" class="flex items-center gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary hover:bg-gray-50 transition active:bg-gray-100">
-                    <img src="https://flagcdn.com/w80/se.png" class="w-10 h-auto rounded-sm shadow-sm" alt="Sverige">
-                    <div class="text-left leading-tight">
-                        <span class="block font-extrabold text-sm md:text-base text-gray-900">Sverige</span>
-                        <span class="text-[10px] text-primary font-bold uppercase tracking-tighter">Gå til butik</span>
+
+                <!-- SVERIGE -->
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC25ZF4/?uid=50295" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/se.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Sverige">
+                    <div class="text-center md:text-left">
+                        <span class="block font-black text-xs md:text-lg text-gray-900">Sverige</span>
+                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
                     </div>
                 </a>
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2T26ZX/?uid=49977" class="flex items-center gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary hover:bg-gray-50 transition active:bg-gray-100">
-                    <img src="https://flagcdn.com/w80/de.png" class="w-10 h-auto rounded-sm shadow-sm" alt="Tyskland">
-                    <div class="text-left leading-tight">
-                        <span class="block font-extrabold text-sm md:text-base text-gray-900">Tyskland / AT / CH</span>
-                        <span class="text-[10px] text-primary font-bold uppercase tracking-tighter">Gå til butik</span>
+
+                <!-- FINLAND -->
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC3JT5P/?uid=50293" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/fi.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Finland">
+                    <div class="text-center md:text-left">
+                        <span class="block font-black text-xs md:text-lg text-gray-900">Finland</span>
+                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
                     </div>
                 </a>
+
+                <!-- TYSKLAND / AT -->
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2T26ZX/?uid=49977" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/de.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Tyskland">
+                    <div class="text-center md:text-left">
+                        <span class="block font-black text-xs md:text-lg text-gray-900">Tyskland / AT</span>
+                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                    </div>
+                </a>
+
+                <!-- FRANKRIG / BE -->
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2WF3PJ/?uid=49978" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/fr.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Frankrig">
+                    <div class="text-center md:text-left">
+                        <span class="block font-black text-xs md:text-lg text-gray-900">Frankrig / BE</span>
+                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                    </div>
+                </a>
+
+                <!-- SCHWEIZ -->
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2T26ZX/?uid=49977" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/ch.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Schweiz">
+                    <div class="text-center md:text-left">
+                        <span class="block font-black text-xs md:text-lg text-gray-900">Schweiz</span>
+                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer Blindado -->
-    <footer class="bg-details border-t border-gray-200 pt-10 pb-6">
-        <div class="container mx-auto px-6 max-w-5xl">
+    <!-- FAQ (AT THE END) -->
+    <section id="faq" class="bg-gray-100 py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-2xl md:text-4xl font-black text-center mb-10 uppercase italic tracking-tighter text-primary">Spørgsmål & Svar</h2>
+            <div class="space-y-4">
+                <details class="group bg-white rounded-2xl shadow-sm border border-transparent open:border-primary transition-all">
+                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none">
+                        Hvad er Trivexol?
+                        <span class="text-primary group-open:rotate-180 transition-transform"><i class="fas fa-plus group-open:hidden text-xs"></i><i class="fas fa-minus hidden group-open:block text-xs"></i></span>
+                    </summary>
+                    <div class="p-5 pt-0 text-xs md:text-base text-gray-600 leading-relaxed border-t border-gray-50 mt-2">
+                        Trivexol er et naturligt kosttilskud designet til at støtte kroppens balance og energiniveau som en del af en sund livsstil.
+                    </div>
+                </details>
+                <details class="group bg-white rounded-2xl shadow-sm border border-transparent open:border-primary transition-all">
+                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none">
+                        Er det sikkert?
+                        <span class="text-primary group-open:rotate-180 transition-transform"><i class="fas fa-plus group-open:hidden text-xs"></i><i class="fas fa-minus hidden group-open:block text-xs"></i></span>
+                    </summary>
+                    <div class="p-5 pt-0 text-xs md:text-base text-gray-600 leading-relaxed border-t border-gray-50 mt-2">
+                        Ja, formlen er baseret på naturlige ekstrakter. Vi anbefaler dog at konsultere din læge, hvis du er gravid eller tager medicin.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPLIANCE FOOTER -->
+    <footer class="bg-details border-t border-gray-200 pt-12 pb-8">
+        <div class="container mx-auto px-6 max-w-6xl">
             
             <!-- Authorization Badge -->
-            <div class="text-center mb-8">
-                <div class="inline-flex items-center gap-2 bg-white/50 px-4 py-1.5 rounded-full border border-white/80 shadow-sm">
-                    <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                    <span class="text-[10px] text-gray-600 font-black uppercase tracking-widest">Autoriseret Partner</span>
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-3 bg-white/60 px-6 py-2.5 rounded-full border border-white/90 shadow-md">
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-[10px] md:text-xs text-gray-700 font-black uppercase tracking-widest">Autoriseret Partner</span>
                 </div>
             </div>
 
             <!-- Identity Info -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 text-[11px] md:text-xs text-gray-700 leading-relaxed">
-                <div class="bg-white/30 p-4 rounded-xl">
-                    <h4 class="font-black uppercase tracking-widest mb-3 text-primary border-b border-gray-300 pb-1">Operatør</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-xs md:text-sm text-gray-700 leading-relaxed text-center md:text-left">
+                <div class="bg-white/40 p-6 rounded-3xl border border-white/50">
+                    <h4 class="font-black uppercase tracking-widest mb-3 text-primary border-b border-gray-400 pb-1">Operatør</h4>
                     <p class="font-bold">Haur B.V.</p>
                     <p>RSIN: 867612939</p>
                     <p>John M. Keynesplein 1, Amsterdam, Holland</p>
-                    <p class="mt-2"><i class="fas fa-envelope mr-1"></i> hello@trivexol.com</p>
+                    <p class="mt-4 font-black"><i class="fas fa-envelope mr-1"></i> hello@trivexol.com</p>
                 </div>
-                <div class="bg-white/30 p-4 rounded-xl">
-                    <h4 class="font-black uppercase tracking-widest mb-3 text-primary border-b border-gray-300 pb-1">Producent</h4>
+                <div class="bg-white/40 p-6 rounded-3xl border border-white/50">
+                    <h4 class="font-black uppercase tracking-widest mb-3 text-primary border-b border-gray-400 pb-1">Producent</h4>
                     <p class="font-bold">STR.VERT CONSULTANTS LTD</p>
-                    <p>HE467408 | Lefkosia, Cypern</p>
-                    <p class="mt-2 text-red-700 font-medium italic">Ingen returvarer til disse adresser.</p>
+                    <p>HE467408 | Lapithou 11, Lefkosia, Cypern</p>
+                    <p class="mt-4 text-red-800 font-black italic uppercase text-[10px]">Ingen returvarer til disse adresser.</p>
                 </div>
             </div>
 
-            <!-- Disclaimer -->
-            <div class="text-[10px] text-gray-500 text-justify md:text-center italic mb-8 border-t border-gray-300 pt-6 leading-normal">
-                Dette produkt er et kosttilskud og er ikke beregnet til at diagnosticere, behandle eller helbrede sygdomme. Søg altid læge før brug. Resultater varierer.
+            <!-- Medical Disclaimer -->
+            <div class="text-[10px] md:text-[11px] text-gray-500 text-justify italic mb-10 border-t border-gray-300 pt-8 leading-relaxed">
+                <strong>Vigtig information:</strong> Dette produkt er et kosttilskud og bør ikke erstatte en varieret kost. Det er ikke beregnet til at diagnosticere, behandle eller helbrede sygdomme. Søg altid læge før brug.
             </div>
 
-            <!-- Links -->
-            <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-[10px] font-black uppercase tracking-widest mb-8">
-                <button onclick="openModal('privacy')" class="hover:text-primary underline decoration-primary/30">Privatlivspolitik</button>
-                <button onclick="openModal('terms')" class="hover:text-primary underline decoration-primary/30">Handelsbetingelser</button>
+            <!-- Policy Links -->
+            <div class="flex flex-wrap justify-center gap-8 md:gap-12 text-[10px] font-black uppercase tracking-widest mb-10">
+                <button onclick="openModal('privacy')" class="underline transition">Privatlivspolitik</button>
+                <button onclick="openModal('terms')" class="underline transition">Handelsbetingelser</button>
             </div>
 
-            <!-- Compliance Footer -->
-            <div class="text-center text-[9px] text-gray-400 space-y-1">
-                <p>© 2026 Trivexol Authorized Portal. Google Ads Compliance 2026.</p>
+            <!-- Final Compliance -->
+            <div class="text-center text-[9px] md:text-[10px] text-gray-400 space-y-2 border-t border-gray-200 pt-6">
+                <p>© 2026 Trivexol Authorized Portal. Google Ads Compliance Shield.</p>
                 <p>GOOGLE er et varemærke tilhørende GOOGLE, Inc. Dette site er uafhængigt.</p>
             </div>
         </div>
@@ -284,30 +302,28 @@
 
     <!-- MODAL -->
     <div id="policyModal" class="modal">
-        <div class="modal-content relative">
-            <button onclick="closeModal()" class="sticky top-0 float-right text-xl font-bold p-2 text-gray-400 hover:text-red-500 transition-colors">&times;</button>
-            <div id="modalBody" class="text-xs md:text-sm leading-relaxed text-gray-700"></div>
+        <div class="modal-content relative shadow-2xl">
+            <button onclick="closeModal()" class="sticky top-0 float-right text-3xl font-bold p-2 text-gray-300 hover:text-red-500">&times;</button>
+            <div id="modalBody" class="text-sm md:text-base leading-relaxed text-gray-700"></div>
         </div>
     </div>
 
     <script>
         const policies = {
             privacy: `
-                <h2 class="text-xl font-black mb-4 text-primary">Privatlivspolitik</h2>
-                <div class="space-y-4">
+                <h2 class="text-xl font-black mb-4 text-primary uppercase italic tracking-tighter border-b pb-2">Privatlivspolitik</h2>
+                <div class="space-y-4 text-gray-600">
+                    <p class="font-bold">Senest opdateret: 24. oktober 2025.</p>
                     <p>Vi passer på dine data. I overensstemmelse med GDPR indsamler vi kun nødvendige oplysninger for at gennemføre din ordre...</p>
-                    <h3 class="font-bold text-gray-900 uppercase text-[11px] tracking-widest">Dine rettigheder</h3>
-                    <p>Du har ret til at anmode om sletning, indsigt eller rettelse af dine data til enhver tid.</p>
-                    <p class="pt-4 border-t italic">Kontakt: hello@trivexol.com</p>
+                    <p><strong>Kontakt:</strong> hello@trivexol.com</p>
                 </div>
             `,
             terms: `
-                <h2 class="text-xl font-black mb-4 text-primary">Handelsbetingelser</h2>
-                <div class="space-y-4">
-                    <p>Disse vilkår gælder for alle køb foretaget via dette uafhængige autoriserede portal...</p>
-                    <h3 class="font-bold text-gray-900 uppercase text-[11px] tracking-widest">Fortrydelsesret</h3>
-                    <p>Du har 30 dages fuld returret på uåbnede produkter i original emballage.</p>
-                    <p class="pt-4 border-t italic font-bold">Læs venligst alle anvisninger på pakken før brug.</p>
+                <h2 class="text-xl font-black mb-4 text-primary uppercase italic tracking-tighter border-b pb-2">Handelsbetingelser</h2>
+                <div class="space-y-4 text-gray-600">
+                    <p class="font-bold">Sidst opdateret: 24. oktober 2025.</p>
+                    <p>Disse vilkår gælder for alle køb foretaget via denne uafhængige autoriserede portal opereret af Haur B.V.</p>
+                    <p><strong>Returret:</strong> Du har 30 dages fuld returret på uåbnede produkter.</p>
                 </div>
             `
         };
@@ -324,8 +340,7 @@
         }
 
         window.onclick = function(event) {
-            const modal = document.getElementById('policyModal');
-            if (event.target == modal) closeModal();
+            if (event.target == document.getElementById('policyModal')) closeModal();
         }
     </script>
 </body>
