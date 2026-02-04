@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <!-- TRACKING SCRIPT -->
     <script src="https://api.raads-trc.com/code/8300-8ce4d960-9d3d-4ec0-b3c0-8e2fca7d6215"></script>
@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>Trivexol – Uafhængig Informationsportal & Autoriseret Tilbud | Danmark</title>
-    <meta name="description" content="Uafhængig gennemgang og autoriserede tilbud på Trivexol. Opdag hvordan denne naturlige formel understøtter metabolisk balance. Resultater kan variere.">
+    <title>Trivexol – Independent Information Portal & Authorized Offer</title>
+    <meta name="description" content="Independent review and authorized offers for Trivexol. Discover how this natural formula supports metabolic balance. Results may vary.">
     <meta name="robots" content="index, follow">
     
     <!-- FAVICON -->
@@ -73,7 +73,6 @@
         @media (max-width: 640px) {
             .mobile-h1 { font-size: 1.85rem !important; line-height: 1.2; }
             .mobile-body { font-size: 1.05rem !important; }
-            /* Ajuste para garantir que nomes longos não quebrem o layout de 2 colunas */
             .country-name { font-size: 11px !important; }
         }
     </style>
@@ -83,8 +82,8 @@
     <!-- MINIMALIST COOKIE BANNER -->
     <div id="cookie-banner">
         <p class="text-[10px] text-gray-500 leading-tight pr-2">
-            Vi bruger cookies til at optimere din oplevelse. 
-            <button onclick="openModal('privacy')" class="underline font-bold text-primary">Læs mere</button>.
+            <span data-i18n="cookie_text">We use cookies to optimize your experience.</span>
+            <button onclick="openModal('privacy')" class="underline font-bold text-primary" data-i18n="cookie_more">Read more</button>.
         </p>
         <button onclick="document.getElementById('cookie-banner').style.display='none'" class="bg-primary text-white text-[10px] font-bold py-2 px-4 rounded-lg uppercase transition-transform active:scale-90">
             OK
@@ -93,7 +92,7 @@
 
     <!-- TOP BAR -->
     <div class="bg-primary text-white text-[10px] md:text-xs font-bold py-2 text-center uppercase tracking-widest px-4">
-        AUTORISERET FORHANDLER | BEGRÆNSET TILBUD | SPAR 48% I DAG
+        <span data-i18n="top_bar">AUTHORIZED DEALER | SPECIAL LIMITED TIME OFFER | 48% OFF</span>
     </div>
 
     <!-- NAVBAR -->
@@ -103,8 +102,8 @@
                 <img src="images/trivexol-logo.svg" onerror="this.src='https://placehold.co/120x35/4E6191/ffffff?text=Trivexol'" alt="Trivexol Logo" class="h-7 md:h-9 w-auto">
             </div>
             <div class="flex gap-4 text-[11px] md:text-xs font-bold uppercase tracking-widest">
-                <a href="#about" class="text-gray-400 hover:text-primary transition">Info</a>
-                <a href="#country-selection" class="bg-primary text-white px-4 py-1.5 rounded-lg active:scale-95 shadow-sm transition">Priser</a>
+                <a href="#about" class="text-gray-400 hover:text-primary transition" data-i18n="nav_info">Info</a>
+                <a href="#country-selection" class="bg-primary text-white px-4 py-1.5 rounded-lg active:scale-95 shadow-sm transition" data-i18n="nav_prices">Prices</a>
             </div>
         </div>
     </nav>
@@ -118,15 +117,15 @@
     <section id="about" class="container mx-auto px-6 py-10 md:py-16 max-w-4xl">
         <div class="flex items-center gap-1 mb-5 text-yellow-500 text-sm justify-center md:justify-start">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <span class="text-gray-900 font-black ml-2 uppercase tracking-tighter">4.9/5 Tilfredshed</span>
+            <span class="text-gray-900 font-black ml-2 uppercase tracking-tighter" data-i18n="ratings">4.9/5 Satisfaction</span>
         </div>
         
-        <h1 class="mobile-h1 text-2xl md:text-5xl font-black text-gray-900 mb-6 leading-tight text-center md:text-left">
-            Opdag Trivexol – <span class="text-primary">Smartere Støtte til din krop, naturligt.</span>
+        <h1 class="mobile-h1 text-2xl md:text-5xl font-black text-gray-900 mb-6 leading-tight text-center md:text-left" data-i18n="main_title">
+            Discover Trivexol – <span class="text-primary">Smarter Support for your body, naturally.</span>
         </h1>
         
-        <p class="mobile-body text-gray-600 text-base md:text-xl mb-10 leading-relaxed text-center md:text-left">
-            Oplev en ny standard for daglig velvære. Trivexol er udviklet til at støtte dit stofskifte, energiniveau og generelle balance – så du kan føle dig lettere og mere fokuseret hver dag.
+        <p class="mobile-body text-gray-600 text-base md:text-xl mb-10 leading-relaxed text-center md:text-left" data-i18n="main_subtitle">
+            Experience a new standard of daily wellness. Trivexol is developed to support your metabolism, energy levels, and overall balance – so you can feel lighter and more focused every day.
         </p>
 
         <!-- FEATURES -->
@@ -136,8 +135,8 @@
                     <i class="fas fa-check-circle text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-gray-900 mb-1 text-sm md:text-base">100% Naturlig formel</h3>
-                    <p class="text-xs md:text-sm text-gray-500">Uden GMO eller unødvendige kemikalier.</p>
+                    <h3 class="font-bold text-gray-900 mb-1 text-sm md:text-base" data-i18n="feat_1_title">100% Natural formula</h3>
+                    <p class="text-xs md:text-sm text-gray-500" data-i18n="feat_1_desc">Without GMOs or unnecessary chemicals.</p>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 text-left">
@@ -145,75 +144,75 @@
                     <i class="fas fa-check-circle text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-gray-900 mb-1 text-sm md:text-base">Metabolisk balance</h3>
-                    <p class="text-xs md:text-sm text-gray-500">Støtter kroppens naturlige energiforbrug.</p>
+                    <h3 class="font-bold text-gray-900 mb-1 text-sm md:text-base" data-i18n="feat_2_title">Metabolic balance</h3>
+                    <p class="text-xs md:text-sm text-gray-500" data-i18n="feat_2_desc">Supports the body's natural energy use.</p>
                 </div>
             </div>
         </div>
 
         <!-- MAIN CTA -->
         <div class="text-center">
-            <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" class="w-full md:w-auto bg-primary hover:bg-[#3b4a6b] text-white font-black text-lg md:text-2xl py-5 px-14 rounded-2xl shadow-xl transition-all active:scale-95 uppercase tracking-tighter">
-                Tjek Officielt Tilbud Her
+            <button onclick="document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' })" class="w-full md:w-auto bg-primary hover:bg-[#3b4a6b] text-white font-black text-lg md:text-2xl py-5 px-14 rounded-2xl shadow-xl transition-all active:scale-95 uppercase tracking-tighter" data-i18n="cta_button">
+                Check Official Offer Here
             </button>
-            <p class="text-[10px] md:text-xs text-gray-400 mt-5 uppercase tracking-widest font-bold">
-                Sikker forbindelse til producentens officielle checkout
+            <p class="text-[10px] md:text-xs text-gray-400 mt-5 uppercase tracking-widest font-bold" data-i18n="cta_secure">
+                Secure connection to the manufacturer's official checkout
             </p>
         </div>
     </section>
 
-    <!-- COUNTRY SELECTION (2 COLUMNS MOBILE - STANDARDIZED NAMES) -->
+    <!-- COUNTRY SELECTION (2 COLUMNS MOBILE) -->
     <section id="country-selection" class="py-16 bg-white border-t border-gray-100">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-4xl font-black mb-10 tracking-tight uppercase italic">Vælg din region</h2>
+            <h2 class="text-2xl md:text-4xl font-black mb-10 tracking-tight uppercase italic" data-i18n="region_title">Select your region</h2>
             
             <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-5xl mx-auto px-2">
                 <!-- DANMARK -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2SC4XPWB/?uid=50294" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/dk.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Danmark">
+                    <img src="https://flagcdn.com/w80/dk.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Denmark">
                     <div class="text-center md:text-left">
-                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900">Danmark</span>
-                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900" data-i18n="country_dk">Denmark</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase" data-i18n="see_offer">See Offer</span>
                     </div>
                 </a>
                 <!-- SVERIGE -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2SC25ZF4/?uid=50295" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/se.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Sverige">
+                    <img src="https://flagcdn.com/w80/se.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Sweden">
                     <div class="text-center md:text-left">
-                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900">Sverige</span>
-                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900" data-i18n="country_se">Sweden</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase" data-i18n="see_offer">See Offer</span>
                     </div>
                 </a>
                 <!-- FINLAND -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2SC3JT5P/?uid=50293" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
                     <img src="https://flagcdn.com/w80/fi.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Finland">
                     <div class="text-center md:text-left">
-                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900">Finland</span>
-                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900" data-i18n="country_fi">Finland</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase" data-i18n="see_offer">See Offer</span>
                     </div>
                 </a>
                 <!-- TYSKLAND / ØSTRIG -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2S2T26ZX/?uid=49977" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/de.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Tyskland">
+                    <img src="https://flagcdn.com/w80/de.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Germany">
                     <div class="text-center md:text-left">
-                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900 leading-tight">Tyskland / Østrig</span>
-                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase mt-1">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900 leading-tight" data-i18n="country_de_at">Germany / Austria</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase mt-1" data-i18n="see_offer">See Offer</span>
                     </div>
                 </a>
                 <!-- FRANKRIG / BELGIEN -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2S2WF3PJ/?uid=49978" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/fr.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Frankrig">
+                    <img src="https://flagcdn.com/w80/fr.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="France">
                     <div class="text-center md:text-left">
-                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900 leading-tight">Frankrig / Belgien</span>
-                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase mt-1">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900 leading-tight" data-i18n="country_fr_be">France / Belgium</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase mt-1" data-i18n="see_offer">See Offer</span>
                     </div>
                 </a>
                 <!-- SCHWEIZ -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2S2T26ZX/?uid=49977" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/ch.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Schweiz">
+                    <img src="https://flagcdn.com/w80/ch.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Switzerland">
                     <div class="text-center md:text-left">
-                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900">Schweiz</span>
-                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900" data-i18n="country_ch">Switzerland</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase" data-i18n="see_offer">See Offer</span>
                     </div>
                 </a>
             </div>
@@ -223,31 +222,31 @@
     <!-- FAQ -->
     <section id="faq" class="bg-gray-100 py-16 md:py-24">
         <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-2xl md:text-4xl font-black text-center mb-10 uppercase italic tracking-tighter text-primary">Spørgsmål & Svar</h2>
+            <h2 class="text-2xl md:text-4xl font-black text-center mb-10 uppercase italic tracking-tighter text-primary" data-i18n="faq_title">Questions & Answers</h2>
             <div class="space-y-4">
                 <details class="group bg-white rounded-2xl shadow-sm border border-transparent open:border-primary transition-all">
-                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none uppercase tracking-tight">
-                        Hvad er Trivexol?
+                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none" data-i18n="faq_1_q">
+                        What is Trivexol?
                         <span class="text-primary group-open:rotate-180 transition-transform"><i class="fas fa-plus group-open:hidden text-xs"></i><i class="fas fa-minus hidden group-open:block text-xs"></i></span>
                     </summary>
-                    <div class="p-5 pt-0 text-xs md:text-base text-gray-600 leading-relaxed border-t border-gray-50 mt-2">
-                        Trivexol er et naturligt kosttilskud designet til at støtte kroppens balance og energiniveau som en del af en sund livsstil.
+                    <div class="p-5 pt-0 text-xs md:text-base text-gray-600 leading-relaxed border-t border-gray-50 mt-2" data-i18n="faq_1_a">
+                        Trivexol is a natural dietary supplement designed to support body balance and energy levels as part of a healthy lifestyle.
                     </div>
                 </details>
                 <details class="group bg-white rounded-2xl shadow-sm border border-transparent open:border-primary transition-all">
-                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none uppercase tracking-tight">
-                        Er det sikkert?
+                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none" data-i18n="faq_2_q">
+                        Is it safe?
                         <span class="text-primary group-open:rotate-180 transition-transform"><i class="fas fa-plus group-open:hidden text-xs"></i><i class="fas fa-minus hidden group-open:block text-xs"></i></span>
                     </summary>
-                    <div class="p-5 pt-0 text-xs md:text-base text-gray-600 leading-relaxed border-t border-gray-50 mt-2">
-                        Ja, formlen er baseret på naturlige ekstrakter. Vi anbefaler dog altid at konsultere din læge, hvis du er gravid eller tager medicin.
+                    <div class="p-5 pt-0 text-xs md:text-base text-gray-600 leading-relaxed border-t border-gray-50 mt-2" data-i18n="faq_2_a">
+                        Yes, the formula is based on natural extracts. Always consult your doctor if you have doubts.
                     </div>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- COMPLIANCE FOOTER (SIMPLIFIED) -->
+    <!-- COMPLIANCE FOOTER -->
     <footer class="bg-details border-t border-gray-200 pt-12 pb-8">
         <div class="container mx-auto px-6 max-w-6xl text-center">
             
@@ -255,13 +254,13 @@
             <div class="mb-10">
                 <div class="inline-flex items-center gap-3 bg-white/60 px-6 py-2.5 rounded-full border border-white/90 shadow-md">
                     <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
-                    <span class="text-[10px] md:text-xs text-gray-700 font-black uppercase tracking-widest">Autoriseret Partner</span>
+                    <span class="text-[10px] md:text-xs text-gray-700 font-black uppercase tracking-widest" data-i18n="footer_auth">Authorized Partner</span>
                 </div>
             </div>
 
             <!-- Simplified Contact Info -->
             <div class="mb-10">
-                <h4 class="font-black uppercase tracking-widest mb-4 text-primary text-xs md:text-sm">Officiel Kontakt Information</h4>
+                <h4 class="font-black uppercase tracking-widest mb-4 text-primary text-xs md:text-sm" data-i18n="footer_contact">Official Contact Information</h4>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10 text-xs md:text-sm text-gray-800 font-bold">
                     <a href="mailto:hello@trivexol.com" class="hover:text-primary transition"><i class="fas fa-envelope mr-2 text-primary"></i> hello@trivexol.com</a>
                     <span class="hidden md:inline text-gray-300">|</span>
@@ -270,20 +269,20 @@
             </div>
 
             <!-- Medical Disclaimer -->
-            <div class="text-[10px] md:text-[11px] text-gray-500 text-justify md:text-center italic mb-10 border-t border-gray-300 pt-8 leading-relaxed">
-                <strong>Vigtig information:</strong> Dette produkt er et kosttilskud og bør ikke erstatte en varieret kost. Det er ikke beregnet til at diagnosticere, behandle eller helbrede sygdomme. Søg altid læge før brug.
+            <div class="text-[10px] md:text-[11px] text-gray-500 text-justify md:text-center italic mb-10 border-t border-gray-300 pt-8 leading-relaxed" data-i18n="footer_disclaimer">
+                <strong>Important information:</strong> This product is a dietary supplement and should not replace a varied diet. It is not intended to diagnose, treat, or cure diseases. Always consult a doctor before use.
             </div>
 
             <!-- Policy Links -->
             <div class="flex flex-wrap justify-center gap-8 md:gap-12 text-[10px] font-black uppercase tracking-widest mb-10">
-                <button onclick="openModal('privacy')" class="underline transition">Privatlivspolitik</button>
-                <button onclick="openModal('terms')" class="underline transition">Handelsbetingelser</button>
+                <button onclick="openModal('privacy')" class="underline transition" data-i18n="link_privacy">Privacy Policy</button>
+                <button onclick="openModal('terms')" class="underline transition" data-i18n="link_terms">Terms & Conditions</button>
             </div>
 
             <!-- Final Compliance -->
             <div class="text-center text-[9px] md:text-[10px] text-gray-400 space-y-2 border-t border-gray-200 pt-6">
                 <p>© 2026 Trivexol Authorized Portal. Google Ads Compliance Shield.</p>
-                <p>GOOGLE er et varemærke tilhørende GOOGLE, Inc. Dette site er uafhængigt.</p>
+                <p data-i18n="google_disclaimer">GOOGLE is a trademark of GOOGLE, Inc. This site is independent.</p>
             </div>
         </div>
     </footer>
@@ -297,27 +296,257 @@
     </div>
 
     <script>
-        const policies = {
-            privacy: `
-                <h2 class="text-xl font-black mb-4 text-primary uppercase italic tracking-tighter border-b pb-2">Privatlivspolitik</h2>
-                <div class="space-y-4 text-gray-600">
-                    <p class="font-bold">Senest opdateret: 24. oktober 2025.</p>
-                    <p>Vi passer på dine data. I overensstemmelse med GDPR indsamler vi kun nødvendige oplysninger for at gennemføre din ordre og sikre en tryg oplevelse.</p>
-                    <p><strong>Kontakt:</strong> hello@trivexol.com</p>
-                </div>
-            `,
-            terms: `
-                <h2 class="text-xl font-black mb-4 text-primary uppercase italic tracking-tighter border-b pb-2">Handelsbetingelser</h2>
-                <div class="space-y-4 text-gray-600">
-                    <p class="font-bold">Sidst opdateret: 24. oktober 2025.</p>
-                    <p>Disse vilkår gælder for alle køb foretaget via denne uafhængige autoriserede portal opereret af Haur B.V.</p>
-                    <p><strong>Returret:</strong> Du har 30 dages fuld returret på uåbnede produkter.</p>
-                </div>
-            `
+        const translations = {
+            en: {
+                cookie_text: "We use cookies to optimize your experience.",
+                cookie_more: "Read more",
+                top_bar: "AUTHORIZED DEALER | SPECIAL LIMITED TIME OFFER | 48% OFF",
+                nav_info: "Info",
+                nav_prices: "Prices",
+                ratings: "4.9/5 Satisfaction",
+                main_title: "Discover Trivexol – <span class='text-primary'>Smartere Support for your body, naturally.</span>",
+                main_subtitle: "Experience a new standard of daily wellness. Trivexol is developed to support your metabolism, energy levels, and overall balance – so you can feel lighter and more focused every day.",
+                feat_1_title: "100% Natural formula",
+                feat_1_desc: "Without GMOs or unnecessary chemicals.",
+                feat_2_title: "Metabolic balance",
+                feat_2_desc: "Supports the body's natural energy use.",
+                cta_button: "Check Official Offer Here",
+                cta_secure: "Secure connection to the manufacturer's official checkout",
+                region_title: "Select your region",
+                country_dk: "Denmark",
+                country_se: "Sweden",
+                country_fi: "Finland",
+                country_de_at: "Germany / Austria",
+                country_fr_be: "France / Belgium",
+                country_ch: "Switzerland",
+                see_offer: "See Offer",
+                faq_title: "Questions & Answers",
+                faq_1_q: "What is Trivexol?",
+                faq_1_a: "Trivexol is a natural dietary supplement designed to support body balance and energy levels as part of a healthy lifestyle.",
+                faq_2_q: "Is it safe?",
+                faq_2_a: "Yes, the formula is based on natural extracts. Always consult your doctor if you have doubts.",
+                footer_auth: "Authorized Partner",
+                footer_contact: "Official Contact Information",
+                footer_disclaimer: "<strong>Important information:</strong> This product is a dietary supplement and should not replace a varied diet. It is not intended to diagnose, treat, or cure diseases. Always consult a doctor before use.",
+                link_privacy: "Privacy Policy",
+                link_terms: "Terms & Conditions",
+                google_disclaimer: "GOOGLE is a trademark of GOOGLE, Inc. This site is independent."
+            },
+            da: {
+                cookie_text: "Vi bruger cookies til at optimere din oplevelse.",
+                cookie_more: "Læs mere",
+                top_bar: "AUTORISERET FORHANDLER | BEGRÆNSET TILBUD | SPAR 48% I DAG",
+                nav_info: "Info",
+                nav_prices: "Priser",
+                ratings: "4.9/5 Tilfredshed",
+                main_title: "Opdag Trivexol – <span class='text-primary'>Smartere Støtte til din krop, naturligt.</span>",
+                main_subtitle: "Oplev en ny standard for daglig velvære. Trivexol er udviklet til at støtte dit stofskifte, energiniveau og generelle balance.",
+                feat_1_title: "100% Naturlig formel",
+                feat_1_desc: "Uden GMO eller unødvendige kemikalier.",
+                feat_2_title: "Metabolisk balance",
+                feat_2_desc: "Støtter kroppens naturlige energiforbrug.",
+                cta_button: "Tjek Officielt Tilbud Her",
+                cta_secure: "Sikker forbindelse til producentens officielle checkout",
+                region_title: "Vælg din region",
+                country_dk: "Danmark",
+                country_se: "Sverige",
+                country_fi: "Finland",
+                country_de_at: "Tyskland / Østrig",
+                country_fr_be: "Frankrig / Belgien",
+                country_ch: "Schweiz",
+                see_offer: "Se Tilbud",
+                faq_title: "Spørgsmål & Svar",
+                faq_1_q: "Hvad er Trivexol?",
+                faq_1_a: "Trivexol er et naturligt kosttilskud designet til at støtte kroppens balance og energiniveau.",
+                faq_2_q: "Er det sikkert?",
+                faq_2_a: "Ja, formlen er baseret på naturlige ekstrakter. Konsulter altid din læge.",
+                footer_auth: "Autoriseret Partner",
+                footer_contact: "Officiel Kontakt Information",
+                footer_disclaimer: "<strong>Vigtig information:</strong> Dette produkt er et kosttilskud og bør ikke erstatte en varieret kost.",
+                link_privacy: "Privatlivspolitik",
+                link_terms: "Handelsbetingelser",
+                google_disclaimer: "GOOGLE er et varemærke tilhørende GOOGLE, Inc. Dette site er uafhængigt."
+            },
+            sv: {
+                cookie_text: "Vi använder cookies för att optimera din upplevelse.",
+                cookie_more: "Läs mer",
+                top_bar: "AUKTORISERAD ÅTERFÖRSÄLJARE | BEGRÄNSAT ERBJUDANDE | 48% RABATT",
+                nav_info: "Info",
+                nav_prices: "Priser",
+                ratings: "4.9/5 Nöjdhet",
+                main_title: "Upptäck Trivexol – <span class='text-primary'>Smartare stöd för din kropp, naturligt.</span>",
+                main_subtitle: "Upplev en ny standard för dagligt välbefinnande. Trivexol är utvecklat för att stödja din ämnesomsättning och energinivåer.",
+                feat_1_title: "100% Naturlig formel",
+                feat_1_desc: "Utan GMO eller onödiga kemikalier.",
+                feat_2_title: "Metabolisk balans",
+                feat_2_desc: "Stödjer kroppens naturliga energianvändning.",
+                cta_button: "Se officiellt erbjudande här",
+                cta_secure: "Säker anslutning till tillverkarens officiella kassa",
+                region_title: "Välj din region",
+                country_dk: "Danmark",
+                country_se: "Sverige",
+                country_fi: "Finland",
+                country_de_at: "Tyskland / Österrike",
+                country_fr_be: "Frankrike / Belgien",
+                country_ch: "Schweiz",
+                see_offer: "Se erbjudande",
+                faq_title: "Frågor & Svar",
+                faq_1_q: "Vad är Trivexol?",
+                faq_1_a: "Trivexol är ett naturligt kosttillskott designat för att stödja kroppens balans och energinivåer.",
+                faq_2_q: "Är det säkert?",
+                faq_2_a: "Ja, formulan är baserad på naturliga extrakt. Rådgör alltid med läkare vid tvivel.",
+                footer_auth: "Auktoriserad Partner",
+                footer_contact: "Officiell kontaktinformation",
+                footer_disclaimer: "<strong>Viktig information:</strong> Denna produkt är ett kosttillskott och bör inte ersätta en varierad kost.",
+                link_privacy: "Integritetspolicy",
+                link_terms: "Allmänna villkor",
+                google_disclaimer: "GOOGLE är um varumärke som tillhör GOOGLE, Inc. Denna webbplats är oberoende."
+            },
+            fi: {
+                cookie_text: "Käytämme evästeitä kokemuksesi optimoimiseksi.",
+                cookie_more: "Lue lisää",
+                top_bar: "VALTUUTETTU JÄLLEENMYYJÄ | RAJOITETTU TARJOUS | 48% ALENNUS",
+                nav_info: "Tietoa",
+                nav_prices: "Hinnat",
+                ratings: "4.9/5 Tyytyväisyys",
+                main_title: "Löydä Trivexol – <span class='text-primary'>Älykkäämpi tuki kehollesi, luonnollisesti.</span>",
+                main_subtitle: "Koe päivittäisen hyvinvoinnin uusi standardi. Trivexol on kehitetty tukemaan aineenvaihduntaasi ja energiatasojasi.",
+                feat_1_title: "100% Luonnollinen koostumus",
+                feat_1_desc: "Ilman GMO-aineita tai turhia kemikaaleja.",
+                feat_2_title: "Aineenvaihdunnan tasapaino",
+                feat_2_desc: "Tukee kehon luonnollista energiankäyttöä.",
+                cta_button: "Katso virallinen tarjous tästä",
+                cta_secure: "Suojattu yhteys valmistajan viralliseen kassaan",
+                region_title: "Valitse alueesi",
+                country_dk: "Tanska",
+                country_se: "Ruotsi",
+                country_fi: "Suomi",
+                country_de_at: "Saksa / Itävalta",
+                country_fr_be: "Ranska / Belgia",
+                country_ch: "Sveitsi",
+                see_offer: "Katso tarjous",
+                faq_title: "Kysymykset & Vastaukset",
+                faq_1_q: "Mikä on Trivexol?",
+                faq_1_a: "Trivexol on luonnollinen ravintolisä, joka on suunniteltu tukemaan kehon tasapainoa ja energiatasoja.",
+                faq_2_q: "Onko se turvallista?",
+                faq_2_a: "Kyllä, koostumus perustuu luonnollisiin uutteisiin. Keskustele aina lääkärin kanssa tarvittaessa.",
+                footer_auth: "Valtuutettu kumppani",
+                footer_contact: "Viralliset yhteystiedot",
+                footer_disclaimer: "<strong>Tärkeää tietoa:</strong> Tämä tuote on ravintolisä, eikä se korvaa monipuolista ruokavaliota.",
+                link_privacy: "Tietosuojakäytäntö",
+                link_terms: "Käyttöehdot",
+                google_disclaimer: "GOOGLE on GOOGLE, Inc:n tavaramerkki. Tämä sivusto on itsenäinen."
+            },
+            de: {
+                cookie_text: "Wir verwenden Cookies, um Ihre Erfahrung zu optimieren.",
+                cookie_more: "Mehr lesen",
+                top_bar: "AUTORISIERTER HÄNDLER | BEGRENZTES ANGEBOT | 48% RABATT",
+                nav_info: "Info",
+                nav_prices: "Preise",
+                ratings: "4.9/5 Zufriedenheit",
+                main_title: "Entdecke Trivexol – <span class='text-primary'>Smartere Unterstützung für deinen Körper, natürlich.</span>",
+                main_subtitle: "Erlebe einen neuen Standard für tägliches Wohlbefinden. Trivexol wurde entwickelt, um deinen Stoffwechsel und dein Energieniveau zu unterstützen.",
+                feat_1_title: "100% Natürliche Formel",
+                feat_1_desc: "Ohne Gentechnik oder unnötige Chemikalien.",
+                feat_2_title: "Stoffwechsel-Balance",
+                feat_2_desc: "Unterstützt den natürlichen Energieverbrauch des Körpers.",
+                cta_button: "Offizielles Angebot hier prüfen",
+                cta_secure: "Sichere Verbindung zur offiziellen Kasse des Herstellers",
+                region_title: "Wähle deine Region",
+                country_dk: "Dänemark",
+                country_se: "Schweden",
+                country_fi: "Finnland",
+                country_de_at: "Deutschland / Österreich",
+                country_fr_be: "Frankreich / Belgien",
+                country_ch: "Schweiz",
+                see_offer: "Angebot ansehen",
+                faq_title: "Fragen & Antworten",
+                faq_1_q: "Was ist Trivexol?",
+                faq_1_a: "Trivexol ist ein natürliches Nahrungsergänzungsmittel, das entwickelt wurde, um das Körpergleichgewicht und das Energieniveau zu unterstützen.",
+                faq_2_q: "Ist es sicher?",
+                faq_2_a: "Ja, die Formel basiert auf natürlichen Extrakten. Konsultieren Sie bei Zweifeln immer Ihren Arzt.",
+                footer_auth: "Autorisierter Partner",
+                footer_contact: "Offizielle Kontaktinformationen",
+                footer_disclaimer: "<strong>Wichtige Information:</strong> Dieses Produkt ist ein Nahrungsergänzungsmittel und kein Ersatz für eine ausgewogene Ernährung.",
+                link_privacy: "Datenschutzbestimmungen",
+                link_terms: "Allgemeine Geschäftsbedingungen",
+                google_disclaimer: "GOOGLE ist eine Marke von GOOGLE, Inc. Diese Website ist unabhängig."
+            },
+            fr: {
+                cookie_text: "Nous utilisons des cookies pour optimiser votre expérience.",
+                cookie_more: "Lire la suite",
+                top_bar: "REVENDEUR AGRÉÉ | OFFRE LIMITÉE | 48% DE RÉDUCTION",
+                nav_info: "Infos",
+                nav_prices: "Prix",
+                ratings: "4.9/5 Satisfaction",
+                main_title: "Découvrez Trivexol – <span class='text-primary'>Un soutien plus intelligent pour votre corps, naturellement.</span>",
+                main_subtitle: "Découvrez un nouveau standard de bien-être quotidien. Trivexol est développé pour soutenir votre métabolisme et vos niveaux d'énergie.",
+                feat_1_title: "Formule 100% naturelle",
+                feat_1_desc: "Sans OGM ni produits chimiques inutiles.",
+                feat_2_title: "Équilibre métabolique",
+                feat_2_desc: "Soutient l'utilisation naturelle de l'énergie par le corps.",
+                cta_button: "Vérifier l'offre officielle ici",
+                cta_secure: "Connexion sécurisée vers la caisse officielle du fabricant",
+                region_title: "Sélectionnez votre région",
+                country_dk: "Danemark",
+                country_se: "Suède",
+                country_fi: "Finlande",
+                country_de_at: "Allemagne / Autriche",
+                country_fr_be: "France / Belgique",
+                country_ch: "Suisse",
+                see_offer: "Voir l'offre",
+                faq_title: "Questions & Réponses",
+                faq_1_q: "Qu'est-ce que Trivexol?",
+                faq_1_a: "Trivexol est un complément alimentaire naturel conçu pour soutenir l'équilibre corporel et les niveaux d'énergie.",
+                faq_2_q: "Est-ce sûr?",
+                faq_2_a: "Oui, la formule est basée sur des extraits naturels. Consultez toujours votre médecin en cas de doute.",
+                footer_auth: "Partenaire agréé",
+                footer_contact: "Informations de contact officielles",
+                footer_disclaimer: "<strong>Informations importantes :</strong> Ce produit est un complément alimentaire et ne doit pas remplacer une alimentation variée.",
+                link_privacy: "Politique de confidentialité",
+                link_terms: "Conditions générales",
+                google_disclaimer: "GOOGLE est une marque de GOOGLE, Inc. Ce site est indépendant."
+            }
         };
 
+        function setLanguage(lang) {
+            const currentTranslations = translations[lang] || translations['en'];
+            const elements = document.querySelectorAll('[data-i18n]');
+            
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (currentTranslations[key]) {
+                    el.innerHTML = currentTranslations[key];
+                }
+            });
+        }
+
         function openModal(type) {
-            document.getElementById('modalBody').innerHTML = policies[type];
+            const currentLang = document.documentElement.lang || 'en';
+            const currentTranslations = translations[currentLang] || translations['en'];
+            
+            let content = '';
+            if (type === 'privacy') {
+                content = `
+                    <h2 class="text-xl font-black mb-4 text-primary uppercase italic tracking-tighter border-b pb-2">${currentTranslations.link_privacy}</h2>
+                    <div class="space-y-4 text-gray-600">
+                        <p class="font-bold">Last Updated: Oct 2025</p>
+                        <p>We care about your data. In accordance with GDPR, we only collect necessary info to complete your order and ensure a safe experience.</p>
+                        <p><strong>Contact:</strong> hello@trivexol.com</p>
+                    </div>
+                `;
+            } else {
+                content = `
+                    <h2 class="text-xl font-black mb-4 text-primary uppercase italic tracking-tighter border-b pb-2">${currentTranslations.link_terms}</h2>
+                    <div class="space-y-4 text-gray-600">
+                        <p class="font-bold">Last Updated: Oct 2025</p>
+                        <p>These terms apply to all purchases made via this independent authorized portal operated by Haur B.V.</p>
+                        <p><strong>Returns:</strong> You have a 30-day full return policy on unopened products.</p>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('modalBody').innerHTML = content;
             document.getElementById('policyModal').style.display = "block";
             document.body.style.overflow = "hidden";
         }
@@ -330,6 +559,20 @@
         window.onclick = function(event) {
             if (event.target == document.getElementById('policyModal')) closeModal();
         }
+
+        // Automatic Language Detection (Safe & Non-Redirecting)
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language.split('-')[0];
+            const supportedLangs = ['da', 'sv', 'fi', 'de', 'fr'];
+            
+            if (supportedLangs.includes(userLang)) {
+                document.documentElement.lang = userLang;
+                setLanguage(userLang);
+            } else {
+                document.documentElement.lang = 'en';
+                setLanguage('en');
+            }
+        });
     </script>
 </body>
 </html>
