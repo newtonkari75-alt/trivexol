@@ -73,6 +73,8 @@
         @media (max-width: 640px) {
             .mobile-h1 { font-size: 1.85rem !important; line-height: 1.2; }
             .mobile-body { font-size: 1.05rem !important; }
+            /* Ajuste para garantir que nomes longos não quebrem o layout de 2 colunas */
+            .country-name { font-size: 11px !important; }
         }
     </style>
 </head>
@@ -94,7 +96,7 @@
         AUTORISERET FORHANDLER | BEGRÆNSET TILBUD | SPAR 48% I DAG
     </div>
 
-    <!-- NAVBAR (CLEAN) -->
+    <!-- NAVBAR -->
     <nav class="bg-white border-b border-gray-100 py-4 sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-5 flex justify-between items-center">
             <div class="flex items-center">
@@ -107,12 +109,12 @@
         </div>
     </nav>
 
-    <!-- HERO IMAGE (NO TEXT OVERLAY) -->
+    <!-- HERO IMAGE (SEPARATED) -->
     <section class="relative w-full h-auto bg-gray-200">
-        <img src="images/trivexol.png" class="w-full h-auto block object-cover" alt="Trivexol Produkt">
+        <img src="images/trivexol.png" class="w-full h-auto block object-cover" alt="">
     </section>
 
-    <!-- HERO CONTENT (TEXT BELOW IMAGE) -->
+    <!-- HERO CONTENT -->
     <section id="about" class="container mx-auto px-6 py-10 md:py-16 max-w-4xl">
         <div class="flex items-center gap-1 mb-5 text-yellow-500 text-sm justify-center md:justify-start">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -129,22 +131,22 @@
 
         <!-- FEATURES -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
-            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 text-left">
                 <div class="bg-primary/10 p-3 rounded-xl text-primary shrink-0">
                     <i class="fas fa-check-circle text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-gray-900 mb-1">100% Naturlig formel</h3>
-                    <p class="text-sm text-gray-500">Uden GMO eller unødvendige kemikalier.</p>
+                    <h3 class="font-bold text-gray-900 mb-1 text-sm md:text-base">100% Naturlig formel</h3>
+                    <p class="text-xs md:text-sm text-gray-500">Uden GMO eller unødvendige kemikalier.</p>
                 </div>
             </div>
-            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4 text-left">
                 <div class="bg-primary/10 p-3 rounded-xl text-primary shrink-0">
                     <i class="fas fa-check-circle text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-gray-900 mb-1">Metabolisk balance</h3>
-                    <p class="text-sm text-gray-500">Støtter kroppens naturlige energiforbrug.</p>
+                    <h3 class="font-bold text-gray-900 mb-1 text-sm md:text-base">Metabolisk balance</h3>
+                    <p class="text-xs md:text-sm text-gray-500">Støtter kroppens naturlige energiforbrug.</p>
                 </div>
             </div>
         </div>
@@ -160,78 +162,71 @@
         </div>
     </section>
 
-    <!-- COUNTRY SELECTION (2 COLUMNS ON MOBILE) -->
+    <!-- COUNTRY SELECTION (2 COLUMNS MOBILE - STANDARDIZED NAMES) -->
     <section id="country-selection" class="py-16 bg-white border-t border-gray-100">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-2xl md:text-4xl font-black mb-10 tracking-tight uppercase italic">Vælg din region</h2>
             
             <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-5xl mx-auto px-2">
-                
                 <!-- DANMARK -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC4XPWB/?uid=50294" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/dk.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Danmark">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC4XPWB/?uid=50294" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/dk.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Danmark">
                     <div class="text-center md:text-left">
-                        <span class="block font-black text-xs md:text-lg text-gray-900">Danmark</span>
-                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900">Danmark</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
                     </div>
                 </a>
-
                 <!-- SVERIGE -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC25ZF4/?uid=50295" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/se.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Sverige">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC25ZF4/?uid=50295" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/se.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Sverige">
                     <div class="text-center md:text-left">
-                        <span class="block font-black text-xs md:text-lg text-gray-900">Sverige</span>
-                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900">Sverige</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
                     </div>
                 </a>
-
                 <!-- FINLAND -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC3JT5P/?uid=50293" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/fi.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Finland">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2SC3JT5P/?uid=50293" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/fi.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Finland">
                     <div class="text-center md:text-left">
-                        <span class="block font-black text-xs md:text-lg text-gray-900">Finland</span>
-                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900">Finland</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
                     </div>
                 </a>
-
-                <!-- TYSKLAND / AT -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2T26ZX/?uid=49977" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/de.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Tyskland">
+                <!-- TYSKLAND / ØSTRIG -->
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2T26ZX/?uid=49977" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/de.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Tyskland">
                     <div class="text-center md:text-left">
-                        <span class="block font-black text-xs md:text-lg text-gray-900">Tyskland / AT</span>
-                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900 leading-tight">Tyskland / Østrig</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase mt-1">Se Tilbud</span>
                     </div>
                 </a>
-
-                <!-- FRANKRIG / BE -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2WF3PJ/?uid=49978" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/fr.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Frankrig">
+                <!-- FRANKRIG / BELGIEN -->
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2WF3PJ/?uid=49978" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/fr.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Frankrig">
                     <div class="text-center md:text-left">
-                        <span class="block font-black text-xs md:text-lg text-gray-900">Frankrig / BE</span>
-                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900 leading-tight">Frankrig / Belgien</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase mt-1">Se Tilbud</span>
                     </div>
                 </a>
-
                 <!-- SCHWEIZ -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2T26ZX/?uid=49977" class="flex flex-col md:flex-row items-center justify-center gap-3 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
-                    <img src="https://flagcdn.com/w80/ch.png" class="w-10 md:w-14 h-auto rounded shadow-sm" alt="Schweiz">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2S2T26ZX/?uid=49977" class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-4 border border-gray-100 rounded-2xl hover:border-primary transition shadow-sm group">
+                    <img src="https://flagcdn.com/w80/ch.png" class="w-8 md:w-12 h-auto rounded shadow-sm group-hover:scale-105 transition" alt="Schweiz">
                     <div class="text-center md:text-left">
-                        <span class="block font-black text-xs md:text-lg text-gray-900">Schweiz</span>
-                        <span class="block text-[9px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
+                        <span class="country-name block font-black text-[12px] md:text-lg text-gray-900">Schweiz</span>
+                        <span class="block text-[8px] md:text-xs text-primary font-bold uppercase">Se Tilbud</span>
                     </div>
                 </a>
-
             </div>
         </div>
     </section>
 
-    <!-- FAQ (AT THE END) -->
+    <!-- FAQ -->
     <section id="faq" class="bg-gray-100 py-16 md:py-24">
         <div class="container mx-auto px-6 max-w-3xl">
             <h2 class="text-2xl md:text-4xl font-black text-center mb-10 uppercase italic tracking-tighter text-primary">Spørgsmål & Svar</h2>
             <div class="space-y-4">
                 <details class="group bg-white rounded-2xl shadow-sm border border-transparent open:border-primary transition-all">
-                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none">
+                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none uppercase tracking-tight">
                         Hvad er Trivexol?
                         <span class="text-primary group-open:rotate-180 transition-transform"><i class="fas fa-plus group-open:hidden text-xs"></i><i class="fas fa-minus hidden group-open:block text-xs"></i></span>
                     </summary>
@@ -240,49 +235,42 @@
                     </div>
                 </details>
                 <details class="group bg-white rounded-2xl shadow-sm border border-transparent open:border-primary transition-all">
-                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none">
+                    <summary class="p-5 font-black cursor-pointer flex justify-between items-center text-sm md:text-lg list-none uppercase tracking-tight">
                         Er det sikkert?
                         <span class="text-primary group-open:rotate-180 transition-transform"><i class="fas fa-plus group-open:hidden text-xs"></i><i class="fas fa-minus hidden group-open:block text-xs"></i></span>
                     </summary>
                     <div class="p-5 pt-0 text-xs md:text-base text-gray-600 leading-relaxed border-t border-gray-50 mt-2">
-                        Ja, formlen er baseret på naturlige ekstrakter. Vi anbefaler dog at konsultere din læge, hvis du er gravid eller tager medicin.
+                        Ja, formlen er baseret på naturlige ekstrakter. Vi anbefaler dog altid at konsultere din læge, hvis du er gravid eller tager medicin.
                     </div>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- COMPLIANCE FOOTER -->
+    <!-- COMPLIANCE FOOTER (SIMPLIFIED) -->
     <footer class="bg-details border-t border-gray-200 pt-12 pb-8">
-        <div class="container mx-auto px-6 max-w-6xl">
+        <div class="container mx-auto px-6 max-w-6xl text-center">
             
             <!-- Authorization Badge -->
-            <div class="text-center mb-10">
+            <div class="mb-10">
                 <div class="inline-flex items-center gap-3 bg-white/60 px-6 py-2.5 rounded-full border border-white/90 shadow-md">
                     <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
                     <span class="text-[10px] md:text-xs text-gray-700 font-black uppercase tracking-widest">Autoriseret Partner</span>
                 </div>
             </div>
 
-            <!-- Identity Info -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-xs md:text-sm text-gray-700 leading-relaxed text-center md:text-left">
-                <div class="bg-white/40 p-6 rounded-3xl border border-white/50">
-                    <h4 class="font-black uppercase tracking-widest mb-3 text-primary border-b border-gray-400 pb-1">Operatør</h4>
-                    <p class="font-bold">Haur B.V.</p>
-                    <p>RSIN: 867612939</p>
-                    <p>John M. Keynesplein 1, Amsterdam, Holland</p>
-                    <p class="mt-4 font-black"><i class="fas fa-envelope mr-1"></i> hello@trivexol.com</p>
-                </div>
-                <div class="bg-white/40 p-6 rounded-3xl border border-white/50">
-                    <h4 class="font-black uppercase tracking-widest mb-3 text-primary border-b border-gray-400 pb-1">Producent</h4>
-                    <p class="font-bold">STR.VERT CONSULTANTS LTD</p>
-                    <p>HE467408 | Lapithou 11, Lefkosia, Cypern</p>
-                    <p class="mt-4 text-red-800 font-black italic uppercase text-[10px]">Ingen returvarer til disse adresser.</p>
+            <!-- Simplified Contact Info -->
+            <div class="mb-10">
+                <h4 class="font-black uppercase tracking-widest mb-4 text-primary text-xs md:text-sm">Officiel Kontakt Information</h4>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10 text-xs md:text-sm text-gray-800 font-bold">
+                    <a href="mailto:hello@trivexol.com" class="hover:text-primary transition"><i class="fas fa-envelope mr-2 text-primary"></i> hello@trivexol.com</a>
+                    <span class="hidden md:inline text-gray-300">|</span>
+                    <a href="tel:+14842635085" class="hover:text-primary transition"><i class="fas fa-phone mr-2 text-primary"></i> +1 (484) 263-5085</a>
                 </div>
             </div>
 
             <!-- Medical Disclaimer -->
-            <div class="text-[10px] md:text-[11px] text-gray-500 text-justify italic mb-10 border-t border-gray-300 pt-8 leading-relaxed">
+            <div class="text-[10px] md:text-[11px] text-gray-500 text-justify md:text-center italic mb-10 border-t border-gray-300 pt-8 leading-relaxed">
                 <strong>Vigtig information:</strong> Dette produkt er et kosttilskud og bør ikke erstatte en varieret kost. Det er ikke beregnet til at diagnosticere, behandle eller helbrede sygdomme. Søg altid læge før brug.
             </div>
 
@@ -302,9 +290,9 @@
 
     <!-- MODAL -->
     <div id="policyModal" class="modal">
-        <div class="modal-content relative shadow-2xl">
-            <button onclick="closeModal()" class="sticky top-0 float-right text-3xl font-bold p-2 text-gray-300 hover:text-red-500">&times;</button>
-            <div id="modalBody" class="text-sm md:text-base leading-relaxed text-gray-700"></div>
+        <div class="modal-content relative shadow-2xl text-left">
+            <button onclick="closeModal()" class="sticky top-0 float-right text-3xl font-bold p-2 text-gray-400 hover:text-red-500 transition-colors">&times;</button>
+            <div id="modalBody" class="text-sm md:text-base leading-relaxed text-gray-700 pt-4"></div>
         </div>
     </div>
 
@@ -314,7 +302,7 @@
                 <h2 class="text-xl font-black mb-4 text-primary uppercase italic tracking-tighter border-b pb-2">Privatlivspolitik</h2>
                 <div class="space-y-4 text-gray-600">
                     <p class="font-bold">Senest opdateret: 24. oktober 2025.</p>
-                    <p>Vi passer på dine data. I overensstemmelse med GDPR indsamler vi kun nødvendige oplysninger for at gennemføre din ordre...</p>
+                    <p>Vi passer på dine data. I overensstemmelse med GDPR indsamler vi kun nødvendige oplysninger for at gennemføre din ordre og sikre en tryg oplevelse.</p>
                     <p><strong>Kontakt:</strong> hello@trivexol.com</p>
                 </div>
             `,
